@@ -31,3 +31,10 @@ variable "exampleUser" {
   type        = list(string)
   default     = ["ab", "ac", "ad"]  # Dummy IAM user names
 }
+
+
+output "instance_ip" {
+   value = aws_instance.example.public_ip
+}
+
+# terraform output instance_ip
